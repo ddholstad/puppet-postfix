@@ -16,9 +16,9 @@ class postfix::mailman {
 
   postfix::config {
     'virtual_alias_maps':
-      value => "hash:${postfix::confdir}/virtual";
+      value => "${postfix::hash_method}:${postfix::confdir}/virtual";
     'transport_maps':
-      value => "hash:${postfix::confdir}/transport";
+      value => "${postfix::hash_method}:${postfix::confdir}/transport";
     'mailman_destination_recipient_limit':
       value => '1';
   }
