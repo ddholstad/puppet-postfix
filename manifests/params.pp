@@ -19,6 +19,7 @@ class postfix::params (
   String $mailx_package,
   String $restart_cmd,
   String $master_os_template,
+  String $hash_method,
   Optional[String] $aliasesseltype,
   Optional[String] $seltype,
 ) {
